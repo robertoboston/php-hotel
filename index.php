@@ -49,15 +49,35 @@ $hotels = [
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <?php 
-    foreach ($hotels as $item){
-        foreach ($item as $thing){
-            echo $thing."<br>";
-        }
-    }
-    ?>
-    
+    <div class="container">
+    <table class="tabella">
+        <thead>
+            <th>Nome Hotel</th>
+            <th>Descrizione</th>
+            <th>Parcheggio</th>
+            <th>Voto</th>
+            <th>Distanza dal centro</th>
+        </thead>
+        <tbody>
+            <?php foreach ($hotels as $item){ ?>
+                <tr>
+                    <td><?php echo $item['name']?></td>
+                    <td><?php echo $item['description']?></td>
+                    <td><?php if($item['parking'] == true){
+                        echo 'si';
+                    }else{
+                        echo 'no';
+                    }
+                    ?>;</td>
+                    <td><?php echo $item['vote']?></td>
+                    <td><?php echo $item['distance_to_center']?> km</td>
+                 </tr>  
+            <?php } ?>
+        </tbody>
+    </table>
+    </div>
 </body>
 </html>

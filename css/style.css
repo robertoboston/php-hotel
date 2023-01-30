@@ -1,0 +1,14 @@
+.container{
+    width: 800px;
+    margin: 0 auto;
+}
+
+.tabella{
+    width: 900px;
+    text-align: center;
+}
+
+td{
+    padding:  10px;
+}
+
