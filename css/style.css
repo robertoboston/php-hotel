@@ -1,11 +1,17 @@
 .container{
-    width: 800px;
+    width: 900px;
     margin: 0 auto;
+    padding: 100px 0;
+    background-color: chocolate;
+    margin-top: 200px;
+    border-radius: 20px;
 }
 
 .tabella{
     width: 900px;
     text-align: center;
+    font-family: 'elvetica', sans-serif;
+    font-size: 20px;
 }
 
 td{
